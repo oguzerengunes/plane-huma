@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Hüma",
+  "version": "0.1.0",
+  "identifier": "tr.edu.kulup.huma",
+  "frontendDist": "../dist",
+  "app": {
+    "windows": [{ "url": "HUMA_PLANE_URL", "title": "Hüma", "width": 1280, "height": 800 }]
+  },
+  "plugins": {
+    "updater": {
+      "active": true,
+      "pubkey": "HUMA_UPDATER_PUBKEY",
+      "endpoints": ["https://github.com/kulup-org/huma-desktop/releases/latest/download/latest.json"]
+    },
+    "notification": {}
+  },
+  "bundle": {
+    "createUpdaterArtifacts": true,
+    "icon": ["icons/icon.ico", "icons/icon.icns", "icons/icon.png"]
+  }
+}
